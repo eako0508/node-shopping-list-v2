@@ -58,7 +58,7 @@ app.post('/recipes', jsonParser, (req, res) => {
     const need = req_field[i];
     if(!(need in req.body)){
       const msg = `missing ${need} in request body.`;
-      conole.error(msg);
+      console.error(msg);
       return res.status(400).send(msg);
     }
   }
